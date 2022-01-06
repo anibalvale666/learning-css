@@ -1,0 +1,141 @@
+body {
+    background: gray;
+}
+
+
+h1 {
+    color: red;
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+
+/*
+############## SELECTORES ##############
+*/
+
+
+/* Selector universal */
+/* seleccionar todos los elemntos en el html */
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* margin: 0px; margen  de los objetos */
+    /* padding: 0px; margen pero interno */
+}
+
+
+
+/*---------------- Selector de etiqueta -------------------*/
+h1 {
+    background: red;
+    color: white;
+    padding: 10px;
+}
+
+
+a {
+    font-size: 18px;
+    color: green;
+    text-decoration: none;
+}
+
+/* anidando */
+footer a {
+    color: red;
+}
+
+
+/*------------ selector de id--------------- */
+/* se puede poner varios id separados por comas para asignar un mismo estilo
+ solo se debe uitlizxar co un elemento no con varios
+*/
+#descripcion {
+    border: 1px solid black; /*linea continua alrededor del objeto nde color negro*/
+    padding: 15px;
+}
+
+
+/*---------------- selector de clase ----------------*/
+/* se puede poner en varios elementos 
+    se peude poner varias tipos de clase dentro del atributo class
+     se puede poner el mismo estiloa  varios selectores de clase separandolos por el punto
+*/
+
+.parrafo {
+    font-style: italic; /* texto en cursiva*/
+    text-decoration: underline; /*linea debajo del texto*/
+    font-weight: bold; /*grosor a la fuente: en este caso negrita*/
+}
+
+.parrafo1 {
+    background-color: green;
+    color: white;
+    padding: 10px;
+
+}
+
+.parrafo3 {
+    background-color: orange;
+    color: black;
+}
+
+
+/*---------------- selector de atributo---------------- */
+/* dar estilo a elementos en funcio de atributs
+    se pude separar mediante comas
+*/
+#usuario form {
+    border: 5px solid blue;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+
+/* le estamos dando a todos los elementosdentro de form de el div usuario */
+#usuario form *{
+    display: block; /*permite que los elementos se conporten como texto o elemetos e linea(todo al lado de otra) 
+                 o que se comporte en un bloque(caja individuañ con una linea completa para ella) */
+}
+/* elementos inputs cuyos atributo type sea text*/
+input[type="text"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 300px;
+}
+
+input[type="submit"]{
+    background: green;
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+    text-transform: uppercase; /*mayusculas*/
+    border: 1px solid black;
+    cursor: pointer; /*cuando se asa por encima por el raton cambia el cursor*/
+}
+
+
+/*---------------- selector hijo---------------- */
+/*solos e aplica a los selectores a de li de lo que va despues de id menu */
+#menu > li > a {
+    font-size: 18px;
+    color: red;
+    text-decoration: none;
+}
+
+/* ----------------------Prioridad---------------------*/
+/*normalmente la prioridad va a los elementos mas abajo (cascada)
+ meintras mas especifica la regla mas prioridad tiene
+*/
+
+#saludo h1 {
+    background: brown;
+}
+
+h1 {
+    background: purple !important;
+}
+
+
+
+
+

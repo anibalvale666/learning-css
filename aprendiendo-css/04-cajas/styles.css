@@ -1,0 +1,45 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    padding: 40px;
+}
+#cajas {
+    max-width: 1092px;
+    border: 1px solid black;
+}
+.caja {
+    /* tamañop de la caja */
+    width: 250px;
+    height: 250px;
+    background-color: lightblue;
+    /* como darle un ancho max y minimo  auna caja */
+    /* min-width: ; */
+    /* max-width: ; */
+
+    border: 2px solid red;
+    margin: 5px 20px 35px 50px;
+
+    padding: 20px;
+    /* float permite mover un elemento ( en este caso las cajas se colocan una al lado de la otra y se mueven ala derecha) 
+        se puede aplicar a todos elementos cuyo display sea block (NECESARIO) cuandos e usa float*/
+    display: block;
+    float: left;
+}
+
+.caja p {
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial;
+    line-height: 230px;
+}
+
+.clearfix {
+    float: none;
+    /* no se tiene que flotar */
+    clear: both;
+    /* limpiar todos los flotados. se puded ahce ala izquierad y derecha*/
+}

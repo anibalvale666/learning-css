@@ -1,0 +1,47 @@
+body {
+    background-color: green;
+    background-image: url('patron1.jpg'); /* cartgar una iamgen */
+    background-repeat: no-repeat; /*re pite la imagen se uede poner tambien en funcion de un eje(x  o y)*/
+    background-size: 100% 100%; /* estira la imagen de modo que ocupe toda la ventana*/
+
+    background-attachment: fixed; /*para qu el fondo se quede fijo al ahcer scroll*/
+    background-position: left bottom; /*posicionar la imagen (solo si es mas grande)*/
+    color: green;
+
+    text-indent: 15px; /*la identacion del parrafo */
+    /*letter-spacing: 5px; /* espacio entre lerta y letra*/
+
+}
+
+
+
+#caja{
+    border: 5px solid black;
+    padding: 10px;
+    background-color: red;
+    color: white;
+}
+
+
+h2 {
+    color: red;
+    background: white;
+    border: 5px solid red;
+}
+
+
+/* -----propiedades apra texto------------------*/
+h3 {
+    background-color: black;
+    color: blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center; /*alinear e texto en el centro:  center derecha:right o izq: left
+     justify para acomodar el texto (solo cuand es grande)*/
+     line-height: 50px; /*separacion entre line y linea*/
+
+
+}
+
+p {
+    text-align:justify /*  se aplica a todos los elementos en linea si hay iagenes tambioen le afecta */
+}

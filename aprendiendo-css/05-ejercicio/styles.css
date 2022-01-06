@@ -1,0 +1,164 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contenedor_principal {
+    width: 1200px;
+    border: 1px solid #ccc;
+    margin: 0px auto; /*IMPORTANTE centrar el elemento */
+    margin-top: 20px;
+
+}
+#header {
+    width: 100%;
+    height: 100px;
+    background: rgba(17, 3, 218, 0.377);
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    line-height: 100px;
+    
+}
+
+#menu {
+    background-color: #eeeeee;
+}
+
+#menu ul li{
+    display: block; /*podemos poner inline-block o block con el float */
+    float: left;
+    border-right: 1px  solid #ccc;
+}
+
+
+#menu ul li a {
+    padding: 15px;
+    
+    display: block;
+    color: #444;
+}
+
+#menu ul li:hover{
+    background: rgba(15, 118, 236) ;
+    cursor: pointer;
+}
+#menu ul li:hover a{
+    color: white ;
+}
+
+
+.contenido_principal {
+    width: 69%;
+    border: 1px solid green;
+    float: left;
+}
+
+.contenido_principal p{
+    width: 150px;
+    display: block;
+    float: left;
+}
+
+.clearfix {
+    float: none;
+    /* no se tiene que flotar */
+    clear: both;
+    /* limpiar todos los flotados. se puded ahce ala izquierad y derecha*/
+}
+
+
+.cuadricula {
+    position: relative; /* posicion relativa por defecto */
+    width: 40%;
+    height: 250px;
+    border: 1px solid green;
+    background-color: red;
+    color: white;
+    float: left;
+    margin: 20px;
+}
+
+#barra_lateral {
+    width: 30%;
+    border: 1px solid red;
+    float: left;
+    min-height: 500px;
+    max-height: 650px;
+
+    overflow-y: scroll; /*propiedad apr los elementos que se salend e la pantalla
+                        hidden:  todo lo qeu se salga fuera desaparece
+                        visible:  loq ue viene pór defecto
+                        scroll:  se hace una barra de desplazamiento
+                        overflow-y:  para que solo aparezca la abrra scroll en el eje y */
+
+}
+
+footer {
+    width: 100%;
+    color: white;
+    background-color: black;
+    text-align: right;
+    height: 55px;
+    line-height: 55px;
+
+}
+
+footer span {
+    padding-right: 50px;
+}
+
+
+.libre {
+    position: absolute; /* para mopver la caja opr donde sea se tiene que usar posicion absolute */
+    top: 300px;
+    left: 50%;
+    border: 1px solid black;
+    background-color: red;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 13px;
+    z-index: 2; /*la caja roja predominara por encima */
+}
+
+.libre2 {
+    background-color: green;
+    top: 280px;
+    left: 50%;
+    z-index: 1; /* mientras ams alto se coloca encima de cualquier elemento*/
+}
+
+.fija {
+    position: fixed; /* siempre estara en una posicio fija de la apntalla
+    acompaña al scroll */
+    top: 50%;
+    left: 0;
+    border: 1px solid black;
+    background-color: blue;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 13px;
+
+}
+
+/* ---------------------------------sombras -------------------  */
+
+/*
+
+text-shadow: ejex(px) ejey(px) difuminado(px) color             sombra para el texto
+box-shadow: ejex(px) ejey(px) difuminado(px) color              sombra para la cajas
+box-shadow: ejex(px) ejey(px) difuminado(px) color inset        con la propieda inset se da sombra al interior
+
+border-radius: 50px redondea los bordes,
+border-radius: 5px 5px 5px 4px redondea los bordes de cada esquina
+
+
+
+
+*/
+
+

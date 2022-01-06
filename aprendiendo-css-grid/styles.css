@@ -1,0 +1,265 @@
+body{
+    text-align: center;
+}
+
+/*--------------------------------- Ejercicio completo--------------------------------*/
+
+#website * {
+    margin: 0px;
+    padding: 0px;
+}
+
+#website{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    /* grid-template-rows: repeat(4,1fr); */
+    /* grid-template-rows: 20% 10% 60% 10%; */
+    grid-template-rows: 150px 70px 1fr 70px;
+
+
+    width: 75%;
+    /* 100% de la altura del navegador  */
+    height: 100vh; 
+    margin: 0px auto;
+    border: 1px solid #ccc;
+}
+
+
+#website #cabecera{
+
+    /* centrar el texto de la cabecera verticalmente y horizontalmente */
+    /* hay que hacer uso de display flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    grid-column: 1 / 6;
+    background: blue;
+    color: white;
+}
+
+#website #menu {
+    grid-column: 1 / 6;
+
+    background: lightblue;
+    color: black;
+}
+
+#website #menu ul{
+    
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    list-style: none;
+ 
+}
+
+#website #contenido {
+    grid-column: 1 / 5;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 20px;
+    background: #eee;
+}
+
+#website #contenido article {
+    background: #ccc;
+    border: 1px solid #555;
+}
+
+#website #lateral {
+    grid-column: 5 / 6;
+
+    background: orange;
+    color: white;
+}
+
+#website #pie-pagina{
+    grid-column: 1 / 6;
+    background-color: black;
+    color: white;
+}
+
+
+
+
+
+
+
+/*--------------------------------- Ejercicio completo AREAS--------------------------------*/
+
+#website-areas * {
+    margin: 0px;
+    padding: 0px;
+}
+
+#website-areas{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    /* grid-template-rows: repeat(4,1fr); */
+    /* grid-template-rows: 20% 10% 60% 10%; */
+    grid-template-rows: 150px 70px 1fr 70px;
+
+    grid-template-areas: 
+        "cabecera cabecera cabecera cabecera cabecera"
+        "menu menu menu menu menu"
+        "contenido contenido contenido contenido lateral"
+        "pie pie pie pie lateral";
+
+
+    width: 75%;
+    /* 100% de la altura del navegador  */
+    height: 100vh; 
+    margin: 0px auto;
+    border: 1px solid #ccc;
+}
+
+
+#website-areas #cabecera{
+
+    /* centrar el texto de la cabecera verticalmente y horizontalmente */
+    /* hay que hacer uso de display flex */
+    grid-area: cabecera;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    grid-column: 1 / 6;
+    background: blue;
+    color: white;
+}
+
+#website-areas #menu {
+   grid-area: menu;
+
+    background: lightblue;
+    color: black;
+}
+
+#website-areas #menu ul{
+    
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    list-style: none;
+ 
+}
+
+#website-areas #contenido {
+    grid-area: contenido;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 20px;
+    background: #eee;
+}
+
+#website-areas #contenido article {
+    background: #ccc;
+    border: 1px solid #555;
+}
+
+#website-areas #lateral {
+
+    grid-area: lateral;
+    background: orange;
+    color: white;
+}
+
+#website-areas #pie-pagina{
+    grid-area: pie;
+    background-color: black;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------*/
+/*----------------------------------TEORIA-------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+
+
+.layout {
+    /* definir el grid layout */
+    display: grid;
+    width: 80%;
+    margin: 0px auto;
+    /* como poner elementos al lado del otro */
+    /* con calc puedo restar los pixeles ejemplo clac(50% -10px) */
+    /* ejemplo de uso de la funcion repeat para no poner 25% 25% 25% 25% repeat(4, 25%) */
+    /* grid-template-columns: repeat(4, calc(25% - 10px)); */
+
+    /* existe una unidad de medida llamada fraccion */
+    /* utilizando el grid-gap calcula automaticamente el tamañoo que tiene que tener cada caja sin qeu se salga */
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    
+    /* primera fila con 50% segunda con 10% ... */
+    /* grid-template-rows: 50% 15% 35%; */
+    grid-template-rows: 1fr 1fr 3fr;
+
+
+    /* como expandir columnas */
+
+    grid-gap: 10px; /*margin de 10px  espaciado entre elementos*/
+    padding: 10px;
+    border: 3px solid orangered;
+}
+
+.layout .caja {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+    border: 4px solid #222;
+    /* margin: 10px; */
+    background: gray;
+}
+
+.layout .red {
+
+
+    /* como expandir columnas */
+    /* grid-column-start: 1;
+    grid-column-end: 5; */
+    /* grid-column es lo nmismo que las dos lineas anteriores */
+    grid-column: 1 / 5;
+    background: red;
+}
+
+.layout .blue {
+    background: blue;
+}
+
+.layout .green {
+    /* como expandir filas */
+    /* grid-row-start: 2;
+    grid-row-end: 4; */
+    grid-row: 2 / 4;
+    background: green;
+}
+
+.layout .pink {
+    grid-column: 4 / 5;
+
+    background: pink;
+}
+
+.layout .orange {
+    background: orange;
+}
+
+.layout .lblue {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    background: lightblue;
+}

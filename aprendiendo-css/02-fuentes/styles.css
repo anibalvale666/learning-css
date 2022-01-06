@@ -1,0 +1,40 @@
+
+
+@font-face{
+    font-family: Montecarloper;
+    src: url(fonts/MonteCarlo-Regular.ttf);
+} 
+
+
+
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif; /* si noe xiste una fuente se pne la siguiente */
+    font-family: 'Palette Mosaic', cursive;
+    font-style: italic; /* letra en cursiva*/
+    text-transform: uppercase; /* en mayhusculas */
+
+    /*colores*/
+    /* colores del sistema:  colores qu vienen con un alias */
+    color: mediumpurple; 
+
+    /* colores hexadecimales */
+    color:#54f514c4;
+    /* colores RGB */
+    color: rgb(255,255,107);
+    /* colores RGBa */
+    color: rgb(255,255,107,0.5);
+
+}
+
+h3 {
+    font-family: Montecarloper;
+    font-size: 40px;
+    font-weight: lighter; /* mas delgado */
+}
+
+p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+    font-weight: bold; /* grosor de la letra:  negrita*/
+}

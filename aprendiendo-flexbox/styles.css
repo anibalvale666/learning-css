@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#layout { 
+     /* parecido al float: left */
+     /* al no tener float el contenido de abajo no se flota */
+    /* ocupa el ancho maximo */
+    display: flex;
+    /* en inline-flex el width se convierte en automatico la caja se adapta al contenido que tiene dentro */
+    /* display: inline-flex; */
+
+    /* por default viene como row pero tambien tenemos col y row-reverse, col-reverse */
+    flex-direction: row;
+
+    /* wrap
+        sirve para ponerlo como contenedor, esto es cuando hay muchos elementos
+        dentro de un contenedor y se salen de ambito
+        lo que hace es que los elementos de un contenedor, cuando llegan al limite, 
+        no se sobresalen , se colocan debajo.*/
+        flex-wrap: wrap;
+
+        /*flex-flow une el flex-direction con el flex-wrap en una sola linea*/
+        flex-flow: row wrap;
+        
+        /* se ajusta la altura al tamaño de las cajistas
+            para tamaño vertical
+        */
+        height: 600px;
+        align-items: baseline;
+        align-items: center;
+        align-items: flex-end;
+
+
+        /*organizar  el contenido
+        
+        */
+        justify-content: space-around;
+
+
+    border: 3px solid black;
+    padding: 5px;
+
+}
+
+.caja {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border: 4px solid #222;
+    margin: 10px;
+    background: gray;
+
+    /* flex-grow permite adaptar el tamaño de cada una de las cajas a como a mi me de la gana
+        n puede ir en el layout.
+        0 se queda como estaria por defecto.
+        especifica cunato puede crecer un elemento flexible dentro de flexbox
+        puede ser puesto en cada uno de las cajas, distribuye el tamaño.
+        aporta flexiilidad
+    */
+    flex-grow: 1;
+
+    /* flex-basis:  funciona como el witdh pero dentor dl flexbox */
+    /* para hacer calculos en el css 
+     permite dar un tamaño minimo */
+    /* flex-basis: calc((100% /3)-68px); */
+}
+
+.red {
+    align-self: flex-start;
+    background: red;
+}
+.blue {
+    align-self: center;
+    background: blue;
+}
+.orange {
+    align-self: flex-ends;
+    background: orange;
+}
+.green {
+    align-self: center;
+    background: green;
+}
+
+
+
